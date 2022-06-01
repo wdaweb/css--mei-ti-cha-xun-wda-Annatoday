@@ -1,0 +1,197 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: 0;
+  box-sizing: border-box;
+  transition: 1s;
+  font-family: 'Open Sans', sans-serif;
+}
+.container{
+  width: 100%;
+  margin: auto;
+}
+.row{
+  /* 讓card變彈性元素 */
+  display: flex;
+  flex-wrap: wrap;
+}
+.card{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  /* border: 1px solid black; */
+}
+img{
+  /* border: 1px solid black; */
+  /* 圖片才會在框裡 */
+  width: 100%;
+  /* 大尺寸時也置中 */
+  margin: auto;
+}
+hr{
+  margin-top: 2rem;
+}
+h1{
+  font-weight:bolder;
+}
+h2{
+  margin-bottom: 0.5rem;
+}
+h3{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+span{
+  font-weight: 600;
+  line-height: 1.3rem;
+}
+p{
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+/* p放後面會失效??? */
+.card:nth-child(1) span,h1,h2 {
+  text-align: center;
+}
+
+@media(min-width:576px){
+  .card{
+    width: 50%;
+  }
+}
+
+@media(min-width:768px){
+  hr{
+    display: none;
+  }
+  p{
+    display: none;
+  }
+  h3{
+    text-align: center;
+  }
+  img{
+    width: 45%;
+  }
+  .card{
+    width: 20%;
+  }
+  
+  /* 整合偽元素 */
+  .card::after{
+    content: '';
+    background: rgb(230, 230, 230);
+    position: absolute;
+  }
+  /* wda泰山 */
+  .card:nth-child(1) img{
+    width: 80%;
+  }
+  .card:nth-child(1){
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* html */
+  .card:nth-child(2){
+    position: absolute;
+    left: 1%;
+    top: 5%;
+  }
+  .card:nth-child(2)::after{
+    left: 75%;
+    top: 75%;
+    transform-origin: left top;
+    transform: rotate(-75deg);
+    width: 1%;
+    height: 175%;
+  }
+  /* css */
+  .card:nth-child(3){
+    position: absolute;
+    left: 25%;
+    top: 1%;
+  }
+  .card:nth-child(3)::after{
+    left: 70%;
+    top: 75%;
+    transform-origin: left top;
+    transform: rotate(-45deg);
+    width: 1%;
+    height: 35%;
+  }
+  /* js */
+  .card:nth-child(4){
+    position: absolute;
+    left: 5%;
+    top: 40%;
+  }
+  .card:nth-child(4)::after{
+    left: 75%;
+    top: 50%;
+    transform-origin: left top;
+    transform: rotate(265deg);
+    width: 1%;
+    height: 145%;
+  }
+  /* jq */
+  .card:nth-child(5){
+    position: absolute;
+    left: 20%;
+    bottom: 5%;
+  }
+  .card:nth-child(5)::after{
+    left: 60%;
+    top: 15%;
+    transform-origin: left top;
+    transform: rotate(240deg);
+    width: 1%;
+    height: 80%;
+  }
+  /* bs4 */
+  .card:nth-child(6){
+    position: absolute;
+    left: 65%;
+    top: 1%;
+  }
+  .card:nth-child(6)::after{
+    right: 80%;
+    top: 60%;
+    transform-origin: right top;
+    transform: rotate(55deg);
+    width: 1%;
+    height: 85%;
+  }
+  /* sass */
+  .card:nth-child(7){
+    position: absolute;
+    left: 75%;
+    top: 30%;
+  }
+  .card:nth-child(7)::after{
+    right: 80%;
+    top: 40%;
+    transform-origin: right top;
+    transform: rotate(80deg);
+    width: 1%;
+    height: 200%;
+  }
+  /* vue */
+  .card:nth-child(8){
+    position: absolute;
+    left: 70%;
+    bottom: 15%;
+  }
+  .card:nth-child(8)::after{
+    right: 80%;
+    top: 35%;
+    transform-origin: right top;
+    transform: rotate(115deg);
+    width: 1%;
+    height: 150%;
+  }
+}
