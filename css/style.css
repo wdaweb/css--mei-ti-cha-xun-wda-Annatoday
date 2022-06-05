@@ -52,7 +52,7 @@ p{
   line-height: 1.5rem;
   font-size: 1.1rem;
 }
-/* p放後面會失效??? */
+/* p放後面會失效???=>一層可以，兩層不行 */
 .card:nth-child(1) span,h1,h2 {
   text-align: center;
 }
